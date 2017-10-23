@@ -1,0 +1,6 @@
+D:\Codigos\balta.io\Curso web api 2017\ModernStore\ModernStore.Shared\bin\Debug\ModernStore.Shared.dll
+D:\Codigos\balta.io\Curso web api 2017\ModernStore\ModernStore.Shared\bin\Debug\ModernStore.Shared.pdb
+D:\Codigos\balta.io\Curso web api 2017\ModernStore\ModernStore.Shared\bin\Debug\FluentValidator.dll
+D:\Codigos\balta.io\Curso web api 2017\ModernStore\ModernStore.Shared\obj\Debug\ModernStore.Shared.csproj.CoreCompileInputs.cache
+D:\Codigos\balta.io\Curso web api 2017\ModernStore\ModernStore.Shared\obj\Debug\ModernStore.Shared.dll
+D:\Codigos\balta.io\Curso web api 2017\ModernStore\ModernStore.Shared\obj\Debug\ModernStore.Shared.pdb
