@@ -1,6 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data.Entity;
+using System.Data.SqlClient;
 using System.Linq;
+using Dapper;
+using ModernStore.Domain.Commands.Results;
 using ModernStore.Domain.Entities;
 using ModernStore.Domain.Repositories;
 using ModernStore.Infra.Contexts;
@@ -12,7 +16,7 @@ namespace ModernStore.Infra.Repositories
         private readonly ModernStoreDataContext _context;
         public ProductRepository(ModernStoreDataContext context)
         {
-            
+            _context = context;
         }
         public Product Get(Guid id)
         {
@@ -20,6 +24,17 @@ namespace ModernStore.Infra.Repositories
                 .Products
                 .AsNoTracking()
                 .FirstOrDefault(x => x.Id == id);
+        }
+
+        public IEnumerable<GetProductListCommandResult> Get()
+        {
+            var query = "SELECT [Id], [Title], [Price], [Image] FROM [Product]";
+            using (SqlConnection conn =
+                new SqlConnection(@"Data Source=.;Initial Catalog=ModernStore; Integrated Security = true;"))
+            {
+                conn.Open();
+                return conn.Query<GetProductListCommandResult>(query);
+            }
         }
     }
 }
