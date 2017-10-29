@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data.Entity;
 using System.Data.SqlClient;
 using System.Linq;
@@ -18,12 +19,13 @@ namespace ModernStore.Infra.Repositories
         {
             _context = context;
         }
+
         public Customer Get(Guid id)
         {
             return _context
-                   .Customers
-                   .Include(x => x.User)
-                   .FirstOrDefault(x => x.Id == id);
+                .Customers
+                .Include(x => x.User)
+                .FirstOrDefault(x => x.Id == id);
         }
 
         public GetCustomerCommandResult Get(string username)
@@ -40,16 +42,16 @@ namespace ModernStore.Infra.Repositories
             //        Email = x.Email.Address,
             //        Password = x.User.Password,
             //        Username = x.User.Username
+            //    })
+            //    .FirstOrDefault(x => x.Username == username);
 
-            //    }).FirstOrDefault(x => x.Username == username);
-
-            var query = "SELECT * FROM [GetCustomerInfoView] WHERE [Active] = 1 AND [Username] = @username ";
+            var query = "SELECT * FROM [GetCustomerInfoView] WHERE [Active]=1 AND [Username]=@username";
             using (SqlConnection conn = new SqlConnection(@"Data Source=.;Initial Catalog=ModernStore; Integrated Security = true;"))
             {
                 conn.Open();
                 return conn
                     .Query<GetCustomerCommandResult>(query,
-                    new { username = username})
+                        new { username = username })
                     .FirstOrDefault();
             }
         }
@@ -61,7 +63,7 @@ namespace ModernStore.Infra.Repositories
 
         public bool DocumentExists(string document)
         {
-            return _context.Customers.Any((x => x.Document.Number == document);
+            return _context.Customers.Any(x => x.Document.Number == document);
         }
 
         public void Save(Customer customer)
