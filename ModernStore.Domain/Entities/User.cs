@@ -10,6 +10,7 @@ namespace ModernStore.Domain.Entities
 {
     public class User : Entity
     {
+        protected User() { }
         public User(string username, string password, string confirmPassword)
         {
             Password = EncryptPassword(password);
