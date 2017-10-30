@@ -4,7 +4,7 @@ namespace ModernStore.Domain.Commands.Inputs
 {
     public class RegisterCustomerCommand : ICommand
     {
-        public  string FirstName { get; set; }
+        public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Email { get; set; }
         public string Document { get; set; }

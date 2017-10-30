@@ -46,9 +46,13 @@ namespace ModernStore.Domain.Commands.Handlers
             AddNotifications(user.Notifications);
             AddNotifications(customer.Notifications);
 
+            
+            if (!IsValid())
+                return null;
+
             //Passo 4. Inserir no banco
-            if (IsValid())
-                _customerRepository.Save(customer);
+            _customerRepository.Save(customer);
+
             //Passo 5. Enviar E-mail de boas vindas
             _emailService.Send(
                 customer.Name.ToString(), 
