@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETFramework,Version=v4.6.1/win7-x86",
-    "signature": "f0ad65777d38c7c51563854f97c63558ecacd234"
+    "signature": "32e65549582295b01f43a2ad1df32770862cefdf"
   },
   "compilationOptions": {
     "defines": [
@@ -26,6 +26,7 @@
           "FluentValidator": "1.0.5",
           "Microsoft.ApplicationInsights.AspNetCore": "2.0.0",
           "Microsoft.AspNetCore": "1.1.2",
+          "Microsoft.AspNetCore.Authentication.JwtBearer": "1.1.0",
           "Microsoft.AspNetCore.Mvc": "1.1.1",
           "ModernStore.Domain": "1.0.0",
           "ModernStore.Infra": "1.0.0",
@@ -456,6 +457,30 @@
           "lib/net451/Microsoft.AspNetCore.Antiforgery.dll": {}
         }
       },
+      "microsoft.aspnetcore.authentication/1.1.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.DataProtection": "1.1.0",
+          "Microsoft.AspNetCore.Http": "1.1.2",
+          "Microsoft.AspNetCore.Http.Extensions": "1.1.2",
+          "Microsoft.Extensions.Logging.Abstractions": "1.1.2",
+          "Microsoft.Extensions.Options": "1.1.2",
+          "Microsoft.Extensions.WebEncoders": "1.1.0",
+          "NETStandard.Library": "1.6.1"
+        },
+        "compile": {
+          "lib/net451/Microsoft.AspNetCore.Authentication.dll": {}
+        }
+      },
+      "microsoft.aspnetcore.authentication.jwtbearer/1.1.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Authentication": "1.1.0",
+          "Microsoft.IdentityModel.Protocols.OpenIdConnect": "2.1.0",
+          "NETStandard.Library": "1.6.1"
+        },
+        "compile": {
+          "lib/net451/Microsoft.AspNetCore.Authentication.JwtBearer.dll": {}
+        }
+      },
       "microsoft.aspnetcore.authorization/1.1.0": {
         "dependencies": {
           "Microsoft.Extensions.Logging.Abstractions": "1.1.2",
@@ -1238,6 +1263,36 @@
           "lib/netstandard1.0/Microsoft.Extensions.WebEncoders.dll": {}
         }
       },
+      "microsoft.identitymodel.logging/1.1.0": {
+        "compile": {
+          "lib/net451/Microsoft.IdentityModel.Logging.dll": {}
+        }
+      },
+      "microsoft.identitymodel.protocols/2.1.0": {
+        "dependencies": {
+          "System.IdentityModel.Tokens.Jwt": "5.1.0"
+        },
+        "compile": {
+          "lib/net451/Microsoft.IdentityModel.Protocols.dll": {}
+        }
+      },
+      "microsoft.identitymodel.protocols.openidconnect/2.1.0": {
+        "dependencies": {
+          "Microsoft.IdentityModel.Protocols": "2.1.0"
+        },
+        "compile": {
+          "lib/net451/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll": {}
+        }
+      },
+      "microsoft.identitymodel.tokens/5.1.0": {
+        "dependencies": {
+          "Microsoft.IdentityModel.Logging": "1.1.0",
+          "Newtonsoft.Json": "9.0.1"
+        },
+        "compile": {
+          "lib/net451/Microsoft.IdentityModel.Tokens.dll": {}
+        }
+      },
       "microsoft.net.http.headers/1.1.2": {
         "dependencies": {
           "Microsoft.Extensions.Primitives": "1.1.1",
@@ -1365,6 +1420,14 @@
       "system.globalization.calendars/4.3.0": {
         "compile": {
           "ref/net46/System.Globalization.Calendars.dll": {}
+        }
+      },
+      "system.identitymodel.tokens.jwt/5.1.0": {
+        "dependencies": {
+          "Microsoft.IdentityModel.Tokens": "5.1.0"
+        },
+        "compile": {
+          "lib/net451/System.IdentityModel.Tokens.Jwt.dll": {}
         }
       },
       "system.io/4.3.0": {},
@@ -1531,6 +1594,7 @@
           "FluentValidator": "1.0.5",
           "Microsoft.ApplicationInsights.AspNetCore": "2.0.0",
           "Microsoft.AspNetCore": "1.1.2",
+          "Microsoft.AspNetCore.Authentication.JwtBearer": "1.1.0",
           "Microsoft.AspNetCore.Mvc": "1.1.1",
           "ModernStore.Domain": "1.0.0",
           "ModernStore.Infra": "1.0.0",
@@ -1632,6 +1696,30 @@
         },
         "runtime": {
           "lib/net451/Microsoft.AspNetCore.Antiforgery.dll": {}
+        }
+      },
+      "microsoft.aspnetcore.authentication/1.1.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.DataProtection": "1.1.0",
+          "Microsoft.AspNetCore.Http": "1.1.2",
+          "Microsoft.AspNetCore.Http.Extensions": "1.1.2",
+          "Microsoft.Extensions.Logging.Abstractions": "1.1.2",
+          "Microsoft.Extensions.Options": "1.1.2",
+          "Microsoft.Extensions.WebEncoders": "1.1.0",
+          "NETStandard.Library": "1.6.1"
+        },
+        "runtime": {
+          "lib/net451/Microsoft.AspNetCore.Authentication.dll": {}
+        }
+      },
+      "microsoft.aspnetcore.authentication.jwtbearer/1.1.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Authentication": "1.1.0",
+          "Microsoft.IdentityModel.Protocols.OpenIdConnect": "2.1.0",
+          "NETStandard.Library": "1.6.1"
+        },
+        "runtime": {
+          "lib/net451/Microsoft.AspNetCore.Authentication.JwtBearer.dll": {}
         }
       },
       "microsoft.aspnetcore.authorization/1.1.0": {
@@ -2416,6 +2504,36 @@
           "lib/netstandard1.0/Microsoft.Extensions.WebEncoders.dll": {}
         }
       },
+      "microsoft.identitymodel.logging/1.1.0": {
+        "runtime": {
+          "lib/net451/Microsoft.IdentityModel.Logging.dll": {}
+        }
+      },
+      "microsoft.identitymodel.protocols/2.1.0": {
+        "dependencies": {
+          "System.IdentityModel.Tokens.Jwt": "5.1.0"
+        },
+        "runtime": {
+          "lib/net451/Microsoft.IdentityModel.Protocols.dll": {}
+        }
+      },
+      "microsoft.identitymodel.protocols.openidconnect/2.1.0": {
+        "dependencies": {
+          "Microsoft.IdentityModel.Protocols": "2.1.0"
+        },
+        "runtime": {
+          "lib/net451/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll": {}
+        }
+      },
+      "microsoft.identitymodel.tokens/5.1.0": {
+        "dependencies": {
+          "Microsoft.IdentityModel.Logging": "1.1.0",
+          "Newtonsoft.Json": "9.0.1"
+        },
+        "runtime": {
+          "lib/net451/Microsoft.IdentityModel.Tokens.dll": {}
+        }
+      },
       "microsoft.net.http.headers/1.1.2": {
         "dependencies": {
           "Microsoft.Extensions.Primitives": "1.1.1",
@@ -2551,6 +2669,14 @@
       "system.globalization.calendars/4.3.0": {
         "runtime": {
           "lib/net46/System.Globalization.Calendars.dll": {}
+        }
+      },
+      "system.identitymodel.tokens.jwt/5.1.0": {
+        "dependencies": {
+          "Microsoft.IdentityModel.Tokens": "5.1.0"
+        },
+        "runtime": {
+          "lib/net451/System.IdentityModel.Tokens.Jwt.dll": {}
         }
       },
       "system.io/4.3.0": {},
@@ -2806,6 +2932,20 @@
       "sha512": "sha512-6HM8/rsSGAQybSZ9sNP2f0Xqh507OJu3kvqRksXeHUXV72yuwFpnauGkfIMSt+gwPSvyk8qGqZB2m4sKCUomhA==",
       "path": "microsoft.aspnetcore.antiforgery/1.1.0",
       "hashPath": "microsoft.aspnetcore.antiforgery.1.1.0.nupkg.sha512"
+    },
+    "microsoft.aspnetcore.authentication/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-zapEpMe6NM7S2pNYtR1OMQSHLrDPjRASIt7lktBTt6w6+0ocSxwiIoNyRiBys1VbhGJQnE9jNWjj5VpMJbnB9A==",
+      "path": "microsoft.aspnetcore.authentication/1.1.0",
+      "hashPath": "microsoft.aspnetcore.authentication.1.1.0.nupkg.sha512"
+    },
+    "microsoft.aspnetcore.authentication.jwtbearer/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-dOwpbt53hPHAasJUUuht88iINeHliO6vikYrmgjpM4jM9szBpy2NoPh1xK8hyh6RdfW6k2o+evIHQOJ89nV4DQ==",
+      "path": "microsoft.aspnetcore.authentication.jwtbearer/1.1.0",
+      "hashPath": "microsoft.aspnetcore.authentication.jwtbearer.1.1.0.nupkg.sha512"
     },
     "microsoft.aspnetcore.authorization/1.1.0": {
       "type": "package",
@@ -3304,6 +3444,34 @@
       "path": "microsoft.extensions.webencoders/1.1.0",
       "hashPath": "microsoft.extensions.webencoders.1.1.0.nupkg.sha512"
     },
+    "microsoft.identitymodel.logging/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Dv3G9GIdKyCc4xJjZECQosRJ9//4q/yXmb0vOUOjN1XpkCcHEt5UJ5S4zm8yJR+5tLODA159G2QtVNtK1RsAXw==",
+      "path": "microsoft.identitymodel.logging/1.1.0",
+      "hashPath": "microsoft.identitymodel.logging.1.1.0.nupkg.sha512"
+    },
+    "microsoft.identitymodel.protocols/2.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-yi7uK5JL5JL66Srnj96vMge7ZMCUM2rTVC6P43cORSCaY+3/motXH+3/8o/T/Xpirv7gAOkRPxGwgARcsuRWPw==",
+      "path": "microsoft.identitymodel.protocols/2.1.0",
+      "hashPath": "microsoft.identitymodel.protocols.2.1.0.nupkg.sha512"
+    },
+    "microsoft.identitymodel.protocols.openidconnect/2.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ZqlqwWZ3ce1v/ivSnfMSTfSlZqM6lZbN6BhnwF92ZNvtFMWKp5cpymlzxEx0h7qzGHf15fEQZGWe7rLHx//tQw==",
+      "path": "microsoft.identitymodel.protocols.openidconnect/2.1.0",
+      "hashPath": "microsoft.identitymodel.protocols.openidconnect.2.1.0.nupkg.sha512"
+    },
+    "microsoft.identitymodel.tokens/5.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Hg1+IbP0F9oQ8qIxQobKoOczrwufYMNHrSXj+xF1+4VCpvymhyvpVcgLqi5GOie1qcQYp/yBy04dpBImemVXKg==",
+      "path": "microsoft.identitymodel.tokens/5.1.0",
+      "hashPath": "microsoft.identitymodel.tokens.5.1.0.nupkg.sha512"
+    },
     "microsoft.net.http.headers/1.1.2": {
       "type": "package",
       "serviceable": true,
@@ -3478,6 +3646,13 @@
       "sha512": "sha512-kAX7TVN95KB6cdT90Jc5YlY/VSrCG2Z0NQI2W11Gxx72FcMxed1qYO1C42VGSLHxhL7H30wPM4aYcntikYweKA==",
       "path": "system.globalization.calendars/4.3.0",
       "hashPath": "system.globalization.calendars.4.3.0.nupkg.sha512"
+    },
+    "system.identitymodel.tokens.jwt/5.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-oMcOZ0/7seZYkv8yRPBlfHyc7K/33TS0hVtshvOAiH9rHWqCb3htq4mEbOtqMTo45pzblcm10ArpERlZrSS69A==",
+      "path": "system.identitymodel.tokens.jwt/5.1.0",
+      "hashPath": "system.identitymodel.tokens.jwt.5.1.0.nupkg.sha512"
     },
     "system.io/4.3.0": {
       "type": "package",

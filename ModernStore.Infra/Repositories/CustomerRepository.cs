@@ -70,5 +70,14 @@ namespace ModernStore.Infra.Repositories
         {
             _context.Customers.Add(customer);
         }
+
+        public Customer GetByUsername(string username)
+        {
+            return _context
+                .Customers
+                .Include(x => x.User)
+                .AsNoTracking()
+                .FirstOrDefault(x => x.User.Username == username);
+        }
     }
 }

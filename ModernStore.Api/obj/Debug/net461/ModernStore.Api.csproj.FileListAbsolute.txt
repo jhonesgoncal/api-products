@@ -137,3 +137,10 @@ D:\Codigos\balta.io\Curso web api 2017\ModernStore\ModernStore.Api\obj\Debug\net
 D:\Codigos\balta.io\Curso web api 2017\ModernStore\ModernStore.Api\bin\Debug\net461\System.Data.SqlClient.dll
 D:\Codigos\balta.io\Curso web api 2017\ModernStore\ModernStore.Api\bin\Debug\net461\EntityFramework.SqlServer.dll
 D:\Codigos\balta.io\Curso web api 2017\ModernStore\ModernStore.Api\bin\Debug\net461\EntityFramework.SqlServer.xml
+D:\Codigos\balta.io\Curso web api 2017\ModernStore\ModernStore.Api\bin\Debug\net461\Microsoft.AspNetCore.Authentication.dll
+D:\Codigos\balta.io\Curso web api 2017\ModernStore\ModernStore.Api\bin\Debug\net461\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Codigos\balta.io\Curso web api 2017\ModernStore\ModernStore.Api\bin\Debug\net461\Microsoft.IdentityModel.Logging.dll
+D:\Codigos\balta.io\Curso web api 2017\ModernStore\ModernStore.Api\bin\Debug\net461\Microsoft.IdentityModel.Protocols.dll
+D:\Codigos\balta.io\Curso web api 2017\ModernStore\ModernStore.Api\bin\Debug\net461\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Codigos\balta.io\Curso web api 2017\ModernStore\ModernStore.Api\bin\Debug\net461\Microsoft.IdentityModel.Tokens.dll
+D:\Codigos\balta.io\Curso web api 2017\ModernStore\ModernStore.Api\bin\Debug\net461\System.IdentityModel.Tokens.Jwt.dll
