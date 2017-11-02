@@ -4,13 +4,14 @@ using System.Data.Entity;
 using System.Data.Entity.Core.Common;
 using ModernStore.Domain.Entities;
 using ModernStore.Infra.Mappings;
+using ModernStore.Shared;
 using ProviderService = System.Data.Entity.SqlServer.SqlProviderServices;
 
 namespace ModernStore.Infra.Contexts
 {
     public class ModernStoreDataContext : DbContext
     {
-        public ModernStoreDataContext() : base(@"Data Source=DESKTOP-9MGSMES;Initial Catalog=ModernStore;Integrated Security = true;")
+        public ModernStoreDataContext() : base(Runtime.ConnectionString)
         {
             Configuration.LazyLoadingEnabled = false;
             Configuration.ProxyCreationEnabled = false; 

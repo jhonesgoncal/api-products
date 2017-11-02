@@ -8,6 +8,7 @@ using ModernStore.Domain.Commands.Results;
 using ModernStore.Domain.Entities;
 using ModernStore.Domain.Repositories;
 using ModernStore.Infra.Contexts;
+using ModernStore.Shared;
 
 namespace ModernStore.Infra.Repositories
 {
@@ -46,7 +47,7 @@ namespace ModernStore.Infra.Repositories
             //    .FirstOrDefault(x => x.Username == username);
 
             var query = "SELECT * FROM [GetCustomerInfoView] WHERE [Active]=1 AND [Username]=@username";
-            using (SqlConnection conn = new SqlConnection(@"Data Source=.;Initial Catalog=ModernStore; Integrated Security = true;"))
+            using (SqlConnection conn = new SqlConnection(Runtime.ConnectionString))
             {
                 conn.Open();
                 return conn

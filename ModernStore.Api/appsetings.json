@@ -1,0 +1,5 @@
+﻿{
+  "ConnectionStrings": {
+    "CnnStr": "Data Source=.;Initial Catalog=ModernStore;Integrated Security = true;"
+  } 
+}
