@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="modernwebstoreapi" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^D:\\Codigos\\balta\.io\\Curso\ web\ api\ 2017\\ModernStore\\ModernStore\.Api\\obj\\Release\\net461\\win7-x86\\PubTmp\\Out\\$" />
+  </parameter>
+</parameters>
